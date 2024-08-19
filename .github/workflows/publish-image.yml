@@ -23,7 +23,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: iavas/runpod-pytorch
-          flavor: latest=yes
+          flavor: latest=true
           tags: ${{ steps.read_base_tag.outputs.BASE_TAG }}
 
       - name: Log in to Docker Hub
