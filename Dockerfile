@@ -8,9 +8,10 @@ RUN apt update && apt install -y zsh vim
 RUN pip install jupyter-ai \
 	jupyterlab-lsp \
 	jupyterlab-code-formatter \
+        jedi-language-server \
 	black \
 	isort \
 	langchain-openai
 
 # Copy the configuration files
-COPY jupyter/ /etc/jupyter/
+COPY jupyter/ /root/.jupyter/
