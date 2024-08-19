@@ -19,9 +19,6 @@ jobs:
           remove-haskell: 'true'
           remove-codeql: 'true'
 
-      - name: Check out disk space
-        run: df -h
-
       - name: Check out the repo
         uses: actions/checkout@v4
 
