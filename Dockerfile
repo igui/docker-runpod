@@ -1,5 +1,5 @@
 ARG BASE_TAG=latest
-FROM runpod/${BASE_TAG}
+FROM runpod/pytorch:${BASE_TAG}
 
 # Install basic packages
 RUN apt update && apt install -y zsh vim

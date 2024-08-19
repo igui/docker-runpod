@@ -13,12 +13,12 @@ jobs:
         uses: easimon/maximize-build-space@master
         with:
           root-reserve-mb: 30000
-          temp-reserve-mb: 100
-          swap-size-mb: 1024
-          remove-dotnet: 'true'
-          remove-android: 'true'
-          remove-haskell: 'true'
-          remove-codeql: 'true'
+          # It takes some time to delete files and I don't
+          # think it is necessary right now
+          # remove-dotnet: 'true'
+          # remove-android: 'true'
+          # remove-haskell: 'true'
+          # remove-codeql: 'true'
 
       - name: Check out the repo
         uses: actions/checkout@v4
