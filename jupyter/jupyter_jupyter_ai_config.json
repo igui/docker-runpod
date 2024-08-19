@@ -1,0 +1,7 @@
+{
+    "AiExtension": {
+	"model_provider_id": "openai-chat:gpt-4o",
+	"embeddings_provider_id": "text-embedding-3-large"
+    }
+}
+

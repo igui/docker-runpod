@@ -12,4 +12,5 @@ RUN pip install jupyter-ai \
 	isort \
 	langchain-openai
 
-
+# Copy the configuration files
+COPY jupyter/ /etc/jupyter/
