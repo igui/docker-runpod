@@ -1,4 +1,5 @@
-FROM runpod/pytorch:2.2.0-py3.10-cuda12.1.1-devel-ubuntu22.04
+ARG BASE_TAG=latest
+FROM runpod/${BASE_TAG}
 
 # Install basic packages
 RUN apt update && apt install -y zsh vim

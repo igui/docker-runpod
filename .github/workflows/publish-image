@@ -34,6 +34,7 @@ jobs:
         id: push
         uses: docker/build-push-action@v5
         with:
+          build-args: BASE_TAG=${{ steps.read_base_tag.outputs.BASE_TAG }}
           context: .
           file: ./Dockerfile
           push: true
