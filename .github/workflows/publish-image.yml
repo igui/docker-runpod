@@ -1,6 +1,8 @@
+---
 name: Publish Docker image
 
-on: push
+on:
+  push:
 
 jobs:
   push_to_registry:
@@ -13,15 +15,15 @@ jobs:
       - name: Read base tag
         id: read_base_tag
         run: |
-	    echo BASE_TAG is `cat BASE_TAG`
-	    echo BASE_TAG=`cat BASE_TAG` >> $GITHUB_OUTPUT
+            echo BASE_TAG is `cat BASE_TAG`
+            echo BASE_TAG=`cat BASE_TAG` >> $GITHUB_OUTPUT
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: iavas/runpod-pytorch 
-	  flavor: latest=yes
+          images: iavas/runpod-pytorch
+          flavor: latest=yes
           tags: ${{ steps.read_base_tag.outputs.BASE_TAG }}
 
       - name: Log in to Docker Hub
@@ -39,4 +41,3 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-
