@@ -1,0 +1,14 @@
+{
+    // Inline Completer
+    // @jupyterlab/completer-extension:inline-completer
+    // Inline completer settings.
+    // ************************************************
+
+    // Inline completion providers
+    // [missing schema description]
+    "providers": {
+        "@jupyterlab/jupyter-ai": {
+            "enabled": true
+        }
+    }
+}

@@ -13,5 +13,10 @@ RUN pip install jupyter-ai \
 	isort \
 	langchain-openai
 
+# Copy the startup script
+COPY pre_start.sh /pre_start.sh
+COPY start.sh /start.sh
+COPY post_start.sh /post_start.sh
+
 # Copy the configuration files
 COPY jupyter/ /root/.jupyter/
