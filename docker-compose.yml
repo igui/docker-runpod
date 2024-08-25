@@ -1,0 +1,16 @@
+# Docker Compose File
+services:
+  runpod:
+    container_name: runpod
+    build:
+      context: .
+      args:
+        - BASE_TAG=${BASE_TAG}
+    image: iavas/runpod-pytorch:${BASE_TAG}
+    env_file:
+      - .env
+    ports:
+      - 8888:8888
+    volumes:
+      - ./pre_start.sh:/pre_start.sh
+      - ./post_start.sh:/post_start.sh
